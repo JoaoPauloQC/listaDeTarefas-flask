@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded',()=>{
     document.querySelectorAll('.check-tarefa').forEach(checkbox =>{
 
-        checkbox.addEventListener('change',()=>{
+        checkbox.addEventListener('change',function(){
 
             console.log(checkbox)
             console.log(this.dataset)
