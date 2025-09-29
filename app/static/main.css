@@ -1,0 +1,130 @@
+/* --- Estilos Gerais e Layout --- */
+
+/* Define a fonte padrão, cor de fundo da página e cor do texto */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #1c1e21;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Cria um "cartão" centralizado para o conteúdo da aplicação */
+.container {
+    max-width: 680px;
+    margin: 40px auto; /* 40px de margem em cima/baixo, centralizado horizontalmente */
+    padding: 20px 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para o título principal */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* --- Estilos para o Formulário de Adição --- */
+
+form {
+    display: flex; /* Alinha o campo de texto e o botão na mesma linha */
+    margin-bottom: 25px;
+}
+
+/* Campo de texto para a nova tarefa */
+form input[type="text"] {
+    flex-grow: 1; /* Faz o campo de texto ocupar todo o espaço disponível */
+    padding: 12px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+form input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff; /* Destaca a borda quando o campo está em foco */
+}
+
+/* Botão de "Adicionar" */
+form button {
+    padding: 12px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 6px;
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s; /* Efeito suave na mudança de cor */
+}
+
+/* Efeito visual ao passar o mouse sobre o botão */
+form button:hover {
+    background-color: #0056b3;
+}
+
+
+/* --- Estilos para a Lista de Tarefas --- */
+
+.task-list {
+    list-style-type: none; /* Remove os marcadores (bolinhas) da lista */
+    padding: 0;
+}
+
+.tarefa-item {
+    display: flex;
+    align-items: center; /* Alinha verticalmente o checkbox e o texto */
+    padding: 12px 0;
+    border-bottom: 1px solid #dddfe2;
+}
+
+/* Remove a borda do último item da lista */
+.tarefa-item:last-child {
+    border-bottom: none;
+}
+
+/* Checkbox da tarefa */
+.check-tarefa {
+    margin-right: 15px;
+    /* Aumenta o tamanho do checkbox para facilitar o clique */
+    width: 18px;
+    height: 18px;
+}
+
+/* A classe que o JavaScript adiciona/remove para riscar o texto */
+.concluida {
+    text-decoration: line-through;
+    color: #8a8d91;
+}
+
+
+/* --- Estilos para as Flash Messages --- */
+
+.flash-sucesso, .flash-erro, .flash-info {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.flash-sucesso {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.flash-erro {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.flash-info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
