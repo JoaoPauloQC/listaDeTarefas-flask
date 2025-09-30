@@ -42,6 +42,7 @@ def adicionar():
 
 @app.route("/tarefa/concluir/<int:id>",methods=['POST'])
 def concluir_tarefa(id):
+    print(id)
     tarefa = TAREFAS_DB.get(id)
     if tarefa:
         tarefa['concluida'] = not tarefa['concluida']
